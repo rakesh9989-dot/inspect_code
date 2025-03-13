@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .flag { display: none; }
+        .decoy {
+            color: yellow;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        h1 {
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            font-size: 20px;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .fake-flag-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .fake-flag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, background 0.3s ease;
+            cursor: pointer;
+        }
+        .fake-flag:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.4);
+        }
+        #real-flag-container {
+            margin-top: 20px;
+            color: yellow;
+            font-size: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the CTF Challenge</h1>
+    <p>Can you find the correct flag?</p>
+
+    <div class="fake-flag-container">
+        <div class="fake-flag">BetterLuckNextFlag</div>
+        <div class="fake-flag">FL4g_C4ptUr3d</div>
+        <div class="fake-flag">OopsWrongFlag</div>
+        <div class="fake-flag">F!Re_1n_tH3_holE</div>
+    </div>
+
+    <div id="real-flag-container"></div>
+
+    <script>
+        console.log("Decoy flag in JS: fake_flag_in_js");
+        
+        
+        const encodedFlag = "ZmxhZ3tNQE5Jc2hJX0FuVDNfTkVfbUFuQ0hPRFV9";
+        const decodedFlag = atob(encodedFlag); 
+        
+        console.log("Real Flag:", decodedFlag); 
+
+        
+    </script>
+</body>
+</html>
